@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 //This program will allow a user to edit their profile name and description.
-public class KimRuth_ProfileEditor  {
+public class ProfileEditor  {
 
     static class Profile{
 
