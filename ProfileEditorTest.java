@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class KimRuth_ProfileEditorTest {
+class ProfileEditorTest {
 
     @BeforeEach
     void setUp() {
