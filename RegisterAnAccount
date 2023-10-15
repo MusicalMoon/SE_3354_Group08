@@ -1,0 +1,65 @@
+import java.util.HashMap;
+import java.util.regex.Pattern;
+
+public class RegisteringAnAccount {
+    private HashMap<String, String> registeredUsers = new HashMap<>();
+
+    public boolean isEmailValid(String email) {
+        // Use a regular expression to validate email format
+        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$";
+        return Pattern.matches(emailRegex, email);
+    }
+
+    public boolean isPasswordValid(String password) {
+        // Password should have at least 8 characters, including at least one uppercase letter, one lowercase letter, and one digit.
+        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$";
+        return Pattern.matches(passwordRegex, password);
+    }
+
+    public boolean isUsernameAvailable(String username) {
+        // Check if the username is not taken
+        return !registeredUsers.containsKey(username);
+    }
+
+    public boolean registerAccount(String username, String email, String password) {
+        if (isEmailValid(email) && isPasswordValid(password) && isUsernameAvailable(username)) {
+            // Check if the email is already used to make an account
+            if (registeredUsers.containsValue(email)) {
+                System.out.println("Exception: Email is already used to make an account.");
+                return false;
+            }
+
+            // If all checks pass, register the user
+            registeredUsers.put(username, email);
+            System.out.println("Account registered successfully for user: " + username);
+            return true;
+        } else {
+            if (!isEmailValid(email)) {
+                System.out.println("Invalid: Email domain is fake.");
+            }
+            if (!isPasswordValid(password)) {
+                System.out.println("Invalid: Password entered doesn't meet requirements.");
+            }
+            if (!isUsernameAvailable(username)) {
+                System.out.println("Invalid: Username is taken.");
+            }
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        RegisteringAnAccount accountRegistrar = new RegisteringAnAccount();
+
+        // Registering a valid account
+        accountRegistrar.registerAccount("John Smith", "johnsmith@example.com", "StrongPassword123");
+
+        // Registering an account with an invalid password and a taken username
+        accountRegistrar.registerAccount("Jane Doe", "janedoe@example.com", "weak");
+
+        // Registering an account with a fake email domain
+        accountRegistrar.registerAccount("NewUser", "fake@fakeemail123.com", "GoodPassword123");
+
+        // Registering an account with an email already used
+        accountRegistrar.registerAccount("AnotherUser", "john@example.com", "Password123");
+    }
+}
