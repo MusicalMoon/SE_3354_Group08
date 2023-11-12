@@ -1,6 +1,5 @@
 /**
- * Middleware is designed to limit the number of logins by the user. 
- * It will also set a window of time that is required before another login is allowed. 
+ * Limits number of logins by performed by the user.
  */
 
 //Imports required to limit number of logins
