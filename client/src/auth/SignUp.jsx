@@ -16,7 +16,7 @@ const SignUp = () => {
   });
   const [signUp, { isLoading }] = useSignUpMutation();
   const navigate = useNavigate();
-  useTitle("Recipen - Sign Up");
+  useTitle("Reciply - Sign Up");
 
   const handleChange = (e) => {
     setFormDetails({ ...formDetails, [e.target.id]: e.target.value });
@@ -96,7 +96,7 @@ const SignUp = () => {
             pattern={`^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,20}$`}
           />
           <Button
-            content={"Sign in"}
+            content={"Sign up"}
             type={"submit"}
             customCss={"mt-3 rounded-lg"}
             loading={isLoading}
