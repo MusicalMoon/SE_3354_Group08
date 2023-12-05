@@ -3,12 +3,8 @@ const {
   getAllRecipes,
   getRecipe,
   addRecipe,
-  updateRecipe,
   rateRecipe,
   deleteRecipe,
-  addComment,
-  deleteComment,
-  toggleFavoriteRecipe,
 } = require("../controllers/recipeController");
 const ROLES_LIST = require("../config/rolesList");
 const verifyJwt = require("../middleware/verifyJwt");
