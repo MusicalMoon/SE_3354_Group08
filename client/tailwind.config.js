@@ -4,14 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#ffaa07",
-        primaryLight: "#ffb629",
+        primary: "#22c55e",
+        primaryLight: "#dcfce7",
         light: "#fffefc",
       },
       backgroundImage: {
-        login:
-          "url('https://images.pexels.com/photos/2454533/pexels-photo-2454533.jpeg?auto=compress&cs=tinysrgb&w=720&dpr=1')",
-        hero: "url('https://images.pexels.com/photos/916925/pexels-photo-916925.jpeg?auto=compress&cs=tinysrgb&w=720&dpr=1')",
+        hero: "url('https://www.seriouseats.com/thmb/-IySaVtAL727t2vKY-FfI2M2EA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20230804-SEA-BuffaloChickenSalad-RobbyLozano-000-70ff310ea4be4a28a04048a9c536e748.jpg')",
       },
     },
   },
