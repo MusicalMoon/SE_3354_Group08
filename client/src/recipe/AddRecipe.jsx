@@ -15,8 +15,6 @@ const AddRecipe = () => {
     title: "",
     image: "",
     description: "",
-    //calories: "",
-    //cookingTime: "",
     ingredients: [],
     instructions: [],
   });
@@ -25,8 +23,6 @@ const AddRecipe = () => {
   const [instruction, setInstruction] = useState("");
   const [focused, setFocused] = useState({
     title: "",
-    //calories: "",
-    //cookingTime: "",
     ingredient: "",
   });
   const [addRecipe, { isLoading }] = useAddRecipeMutation();
@@ -167,70 +163,6 @@ const AddRecipe = () => {
             </div>
           </div>
           <hr />
-          {/*
-          <div className="flex flex-col sm:flex-row justify-between">
-            <label
-              htmlFor="calories"
-              className="text-sm font-semibold mb-3 basis-1/2"
-            >
-              Total calories
-            </label>
-            <div className="flex flex-col basis-1/2">
-              <input
-                type="number"
-                onChange={handleChange}
-                value={formDetails.calories}
-                id="calories"
-                required
-                name="calories"
-                onBlur={handleFocus}
-                focused={focused.calories.toString()}
-                aria-required="true"
-                aria-describedby="calories-error"
-                placeholder="Enter total calories"
-                className="p-1.5 border bg-gray-100 rounded focus:outline outline-primary"
-              />
-              <span
-                id="calories-error"
-                className="hidden text-red-500 pl-2 text-sm mt-1"
-              >
-                Should not include letters or special characters
-              </span>
-            </div>
-          </div>
-          <hr />
-          <div className="flex flex-col sm:flex-row justify-between">
-            <label
-              htmlFor="cookingTime"
-              className="text-sm font-semibold mb-3 basis-1/2"
-            >
-              Cooking time
-            </label>
-            <div className="flex flex-col basis-1/2">
-              <input
-                type="number"
-                onChange={handleChange}
-                value={formDetails.cookingTime}
-                id="cookingTime"
-                required
-                name="cookingTime"
-                onBlur={handleFocus}
-                focused={focused.cookingTime.toString()}
-                aria-required="true"
-                aria-describedby="cookingTime-error"
-                placeholder="Total cooking time in mins."
-                className="p-1.5 border bg-gray-100 rounded focus:outline outline-primary"
-              />
-              <span
-                id="cookingTime-error"
-                className="hidden text-red-500 pl-2 text-sm mt-1"
-              >
-                Must only include numbers
-              </span>
-            </div>
-          </div>
-          <hr /> 
-          */}
           <div className="flex flex-col sm:flex-row justify-between">
             <label
               htmlFor="ingredient"

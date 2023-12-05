@@ -4,12 +4,10 @@ import { BiLockAlt } from "react-icons/bi";
 import { IoMailOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { profileBg } from "../../assets";
-import { CircularProgress, Avatar as MuiAvatar } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "../../features/auth/authSlice";
 import uploadImage from "../../common/uploadImage";
 import { toast } from "react-toastify";
-import { useUpdateUserMutation } from "../../features/user/userApiSlice";
 import useAuth from "../../hooks/useAuth";
 import useTitle from "../../hooks/useTitle";
 

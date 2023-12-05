@@ -56,11 +56,6 @@ const Avatar = () => {
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
         >
-          <MuiAvatar
-            alt={user?.name}
-            src={user?.profilePicture}
-            sx={{ width: 34, height: 34 }}
-          />
         </IconButton>
       </Tooltip>
       <Menu
@@ -110,7 +105,7 @@ const Avatar = () => {
             Profile
           </Link>
         </MenuItem>
-        {(user?.isAdmin || user?.isProUser) && (
+        {(user?.isAdmin) (
           <Box>
             <Divider />
             <MenuItem>

@@ -3,15 +3,12 @@ import {
   Comment,
   Button,
   Input,
-  ShareButton,
   NoData,
   ComponentLoading,
 } from "../../components";
 import { IoMailOutline } from "react-icons/io5";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { LuChefHat } from "react-icons/lu";
-import { BsStopwatch } from "react-icons/bs";
-import { LiaWeightSolid } from "react-icons/lia";
 import { AiOutlineHeart, AiFillHeart, AiOutlineUser } from "react-icons/ai";
 import {
   useGetRecipeQuery,
@@ -31,7 +28,7 @@ import useAuth from "../../hooks/useAuth";
 import useTitle from "../../hooks/useTitle";
 
 const SingleRecipe = () => {
-  useTitle("Recipen - Recipe");
+  useTitle("Reciply - Recipe");
 
   const user = useAuth();
   const [rating, setRating] = useState(0);
@@ -239,20 +236,6 @@ const SingleRecipe = () => {
               <p className="my-4">{data?.description}</p>
               {/* Recipe time & cals */}
               <div className="flex flex-col sm:flex-row gap-4 justify-between w-2/3 mx-auto">
-                {/* 
-                <div className="flex flex-col gap-1 items-center">
-                  <BsStopwatch className="text-5xl text-gray-800" />
-                  <h3 className="font-bold text-xl text-primary">
-                    Cooking Time
-                  </h3>
-                  <p>{data?.cookingTime} minutes</p>
-                </div>
-                <div className="flex flex-col gap-1 items-center text-gray-800">
-                  <LiaWeightSolid className="text-5xl" />
-                  <h3 className="font-bold text-xl text-primary">Calories</h3>
-                  <p>{data?.calories} cal</p>
-                  </div>
-                  */}
               </div>
             </div>
           </div>
